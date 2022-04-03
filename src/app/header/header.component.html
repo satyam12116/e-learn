@@ -1,0 +1,41 @@
+
+    <mat-toolbar color="primary">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+  
+      <a mat-button class="companyName" routerLink="/">
+        <span>EDUPRETER</span>
+      </a>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/aboutus">About Us</a>
+        <a mat-button routerLink="/career">Career</a>
+        <a mat-button routerLink="/contactus" (click)="openContactus()">Contact us</a>
+      </div>
+    </mat-toolbar>
+ <div fxLayout="column">
+   <div fxflex="30">
+    <mat-sidenav-container fxFlexFill class="example-container">
+      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+          <a mat-button [routerLink]='["/home"]'>Home</a>
+          <a mat-button [routerLink]='["/aboutus"]'>About Us</a>
+          <a mat-button routerLink="/career">Career</a>
+          <a mat-button routerLink="/contactus">Contact us</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+   </div>
+   <div fxflex="30">
+    <video margin-left="200px" width="800" height="600" preload autoplay >
+      <source src="./assets/vid/edupretor.mp4" type="video/mp4">
+    </video>
+  </div>
+ </div>
+ <router-outlet></router-outlet>

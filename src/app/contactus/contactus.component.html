@@ -1,0 +1,54 @@
+<mat-card class="shadow">
+<div  class="outer" fxLyout="column" fxLayoutAlign="center">
+    <form [formGroup]="contactForm" id="contactForm">
+        <div mat-dialog-title>
+            <div fxLayout="row">
+                <h2> Contact Us</h2>
+                <!-- <div class="spacer"></div>
+                <div fxLayoutAlign="end">
+                    <button mat-icon-button [mat-dailog-close]="true">X</button>
+                </div> -->
+            </div>
+        </div>
+        <mat-dialog-content>
+            
+           <div fxLayout="column">
+               <div fxFlex="100">
+                <mat-label>Name</mat-label><br>
+                <mat-form-field appearance="outline">  
+                 <input matInput id="name" formControlName="name" >
+                 <mat-icon color="accent" matSuffix>email</mat-icon>
+                </mat-form-field>
+               </div>
+               <div fxFlex="100"> 
+                <mat-label>Email</mat-label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput id="email" formControlName="email" >
+                </mat-form-field>
+                </div>
+                <div fxFlex="100">
+                    <mat-label>Mobile no</mat-label><br>
+                    <mat-form-field appearance="outline">  
+                     <input matInput id="mob" formControlName="mob" >
+                    </mat-form-field>
+                   </div>
+                   <div fxFlex="100"> 
+                    <mat-label>Message note</mat-label><br>
+                    <mat-form-field appearance="outline">
+                        <textarea matInput id="msg" formControlName="msg" ></textarea>
+                    </mat-form-field>
+               </div>
+            
+           
+       
+           </div>        
+        </mat-dialog-content>
+      
+            <mat-dialog-actions align="end">
+                <button mat-raised-button mat-dialog-close class="full-rounded"> Cancel</button>
+                <button style="background:brown" mat-raised-button mat-dialog-close cdkFocusInitial class="full-rounded" (click)="save"> Submit</button>
+            </mat-dialog-actions>
+       
+    </form>
+</div>
+</mat-card>
