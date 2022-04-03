@@ -1,0 +1,12 @@
+.parent {
+    display:flex;
+    width:100vw;
+    flex-wrap: wrap;
+    margin: 25px;
+ }
+ 
+ .child {
+    width:20%;
+    min-width: 200px;
+    margin: 15px;
+ }

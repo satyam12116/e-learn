@@ -19,6 +19,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+
+import { VidComponent } from './vid/vid.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { MatCardModule } from '@angular/material/card';
     SidenavComponent,
     AboutusComponent,
     HomeComponent,
-    ContactusComponent
+    ContactusComponent,
+    
+    VidComponent
   ],
   imports: [
     BrowserModule,
